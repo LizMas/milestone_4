@@ -1,0 +1,25 @@
+---
+title: "Milestone 4, ggplot of IOM data"
+author: "Liz M."
+date: "10/10/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE)
+
+library(tidyverse)
+library(readr)
+library(readxl)
+
+idp <- read_excel("C:/Users/Liz/Desktop/GOV_1005/final_proj/idp.xlsx")
+returnee <- read_excel("C:/Users/Liz/Desktop/GOV_1005/final_proj/returnees.xlsx")
+conflict <- read.csv("C:/Users/Liz/Desktop/GOV_1005/final_proj/yemen_conflict.csv")
+
+```
+
+Yemen conflict data from ACLED at https://www.acleddata.com/data/ 
+
+idp and returnee data from IOM at https://displacement.iom.int/datasets/yemen-%E2%80%94-rapid-displacement-tracking-dataset-01-jan-07-sep-2019 
+
