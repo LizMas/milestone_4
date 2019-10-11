@@ -1,5 +1,5 @@
 ---
-title: "Milestone 4, ggplot of IOM data"
+title: "Milestone 4, Yemen Conflict Fatality Data"
 author: "Liz M."
 date: "10/10/2019"
 output: html_document
@@ -12,6 +12,7 @@ knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
 library(readr)
 library(readxl)
+library(ggplot2)
 
 idp <- read_excel("C:/Users/Liz/Desktop/GOV_1005/final_proj/idp.xlsx")
 returnee <- read_excel("C:/Users/Liz/Desktop/GOV_1005/final_proj/returnees.xlsx")
@@ -19,7 +20,11 @@ conflict <- read.csv("C:/Users/Liz/Desktop/GOV_1005/final_proj/yemen_conflict.cs
 
 ```
 
-Yemen conflict data from ACLED at https://www.acleddata.com/data/ 
+```{r plot data}
 
-idp and returnee data from IOM at https://displacement.iom.int/datasets/yemen-%E2%80%94-rapid-displacement-tracking-dataset-01-jan-07-sep-2019 
+ ggplot(conflict, aes(x = year, y = fatalities)) +
+      geom_col() +
+      labs(title = "Fatalities in the Yemeni Civil War by Year" , subtitle = "1 January 2015 - 5 October 2019", caption = "Source: The Armed Conflict Location & Event Data Project (ACLED)")
+
+```
 
